@@ -1,0 +1,14 @@
+name: sample-workflow
+on:
+  push:
+    branches: [master]
+    
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out your repository under $GITHUB_WORKSPACE
+      uses: actions/chekout@v2
+    - name: use ehco command
+      run: echo "sample-workflow"
+      
